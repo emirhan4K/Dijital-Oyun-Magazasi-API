@@ -23,5 +23,11 @@ class UserRepository {
     );
     return updatedUser;
   }
+
+  async findById(userId){
+    const user = await User.findById(userId);
+    return user;
+  }
+
 }
 module.exports = new UserRepository();
