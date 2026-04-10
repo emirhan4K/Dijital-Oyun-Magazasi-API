@@ -20,14 +20,14 @@ class UserService {
 
   async login(email,password){
     const existingUser = await userRepository.findByEmail(email);
-    if (existingUser) {
+    if (!existingUser) {
       throw new Error("Bu email zaten kayitli!");
     }
-    const isPasswordValid = await bcrypt.compare(password,user.password);
+    const isPasswordValid = await bcrypt.compare(password,existingUser.password);
     if(!isPasswordValid){
         throw new Error("Geçersiz şifre!")
     }
-    const token = jwt.sign({userId:user._id},process.env.JWT_SECRET,{
+    const token = jwt.sign({userId:existingUser._id},process.env.JWT_SECRET,{
         expiresIn:"1h",
     });
     return {message:"Giriş başarılı.",token}
