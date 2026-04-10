@@ -18,7 +18,20 @@ class GameService {
   }
 
   async gameSearch(slug){
-    
+    const slugGame = await gameRepository.gameSearch(slug);
+    if(!slugGame){
+        throw new Error("Böyle bir oyun bulunamadı!")
+    }
+    return slugGame;
   }
 
+  async gameId(id){
+    const game = await gameRepository.gameId(id);
+    if(!game){
+        throw new Error("Oyun bulunamadı!")
+    }
+    return game;
+  }
 }
+
+module.exports = new GameService();

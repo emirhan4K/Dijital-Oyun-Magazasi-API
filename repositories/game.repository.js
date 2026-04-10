@@ -16,7 +16,7 @@ class GameRepository{
         return game;
     }
 
-    async getById(id){
+    async gameId(id){
         const game = await Game.findById(id);
         return game;
     }
