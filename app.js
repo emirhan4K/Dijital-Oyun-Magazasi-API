@@ -5,6 +5,7 @@ const express = require("express");
 const connectDB = require("./config/db"); 
 const userRouter = require("./routes/user.routes");
 const gameRouter = require("./routes/game.routes");
+const storeRouter = require("./routes/store.routes");
 
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use("/api/auth",userRouter);
 app.use("/api/games",gameRouter);
+app.use("/api/stores",storeRouter);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

@@ -19,3 +19,5 @@ const authMiddleware = (req,res,next) => {
         return res.status(401).json({message: "Yetkisiz Erisim: Gecersiz veya Süresi Dolmus Token!"})
     }
 }
+
+module.exports = authMiddleware;
