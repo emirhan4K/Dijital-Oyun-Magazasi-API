@@ -1,0 +1,37 @@
+{
+  "name": "game-store-api",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/emirhan4K/Dijital-Oyun-Ma-azas--API#readme",
+  "bugs": {
+    "url": "https://github.com/emirhan4K/Dijital-Oyun-Ma-azas--API/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emirhan4K/Dijital-Oyun-Ma-azas--API.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "joi": "^18.1.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1",
+    "multer": "^2.1.1",
+    "slugify": "^1.6.9"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
