@@ -7,7 +7,7 @@ const reviewSchema = new mongoose.Schema(
       ref: "User",
       required: true
     },
-    gameReview: {
+    gameId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Game",
       required: true
